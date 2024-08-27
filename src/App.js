@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import { RouterProvider } from 'react-router-dom';
+import styled, { createGlobalStyle } from 'styled-components';
+import { router } from './routes/routes';
+import reset from 'styled-reset';
+import { useState } from 'react';
+import LoadingPage from './pages/loading';
 
-function App() {
+const Wrapper = styled.div`
+`;
+const GlobalStyle = createGlobalStyle`
+  ${reset}
+  *{
+    padding: 0;
+    margin: 0;
+  }
+  body{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    color: white;
+    background-color: black;
+  }
+`
+
+function App(){
+  const [ loading, setLoading ]=useState(true);
+  setTimeout(()=>{
+    setLoading(false);
+  },500)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Wrapper>
+    <GlobalStyle/>
+      {loading ? <LoadingPage/>:<RouterProvider router={router}/>}
+    </Wrapper>
   );
 }
 
