@@ -29,6 +29,7 @@ export default function Post({props}){
                     </Like>
                     <Text><p>{text}</p></Text>
                 </div>
+                <h1>날짜</h1>
             </Content>
         </Wrapper>
     );
