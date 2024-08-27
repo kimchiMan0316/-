@@ -27,7 +27,7 @@ export default function ErrorPage(){
         <Wrapper>
             <H>404 Not Found ERROR</H>
             <H>찾을 수 없는 페이지입니다</H>
-            <P><Link style={{color:"cornflowerblue",textDecoration:"none"}} to="/">여기</Link>를 클릭해주세요</P>
+            <P><Link style={{color:"cornflowerblue",textDecoration:"none"}} to="/login">여기</Link>를 클릭해주세요</P>
         </Wrapper>
     );
 }

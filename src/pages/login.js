@@ -75,6 +75,7 @@ export default function Login(){
     }
     const handleLogin = (e) =>{
         e.preventDefault();
+        // getLogin() 로그인 처리 함수
         console.log(loginInf)
         setLogins("계정 확인중...");
         setTimeout(()=>{
@@ -82,6 +83,7 @@ export default function Login(){
             navigate("/")
         },2000)
     }
+    // 로그인 함수
     const getLogin = async()=>{
         const res = await fetch("/api/login", {
             method:"POST",
