@@ -47,7 +47,7 @@ const Input = styled.input`
     }
 `;
 const Swither = styled.p`
-    margin-top: 5px;
+    margin-top: 10px;
 `
 const createAccountStyle = {
     textDecoration: "none",
@@ -110,6 +110,7 @@ export default function Login(){
                 <Input type="password" placeholder="PW" name="password" onChange={onChange} value={password} required/>
                 <Input type="submit" value={login}/>
                 <Swither>아직 계정이 없으신가요?.  <Link style={createAccountStyle} to="/create-account">계정 만들기 &rarr;</Link></Swither>
+                <Swither><Link style={createAccountStyle} to="/create-account">아이디/비밀번호 변경하기</Link></Swither>
                 <KakaoLoginButtin/>
             </Form>
         </Wrapper>

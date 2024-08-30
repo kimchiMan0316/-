@@ -72,10 +72,10 @@ export default function CreateAccount(){
         e.preventDefault();
         setUploading("업로드 중...")
         const data = {
-            username : username,
+            userName : username,
             email : email,
-            password : password,
-            nickname : nickname,
+            passWord : password,
+            nickName : nickname,
             profilePhoto : profilePhoto,
         }
         console.log(data)

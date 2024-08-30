@@ -16,7 +16,12 @@ const H1 = styled.h1`
 export default function About(){
     const [firstTime, setFirsttime] = useState("UNTITY")
     useEffect(()=>{
-       
+       setTimeout(()=>{
+        setFirsttime("한남들의 두번째 이야기")
+       },1500)
+       setTimeout(()=>{
+        setFirsttime("UNTITY 시즌2")
+       },3000)
     },[])
     return(
         <Wrapper>
