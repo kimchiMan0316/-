@@ -20,7 +20,6 @@ const TextArea = styled.div`
     margin: 10px;
 `
 const Like = styled.div`
-
 `
 const Text = styled.div`
     margin-top: 10px;

@@ -121,7 +121,6 @@ export default function CreateAccount(){
                 <Input type="email" name="email" placeholder="E-mail을 입력해주세요."value={email} onChange={onChange}/>
                 <Input type="password" name="password" placeholder="사용할 비밀번호를 입력해주세요." value={password} onChange={onChange}/>
                 <Input type="text" name="nickname" placeholder="사용하실 닉네임을 입력해주세요." value={nickname} onChange={onChange}/>
-                {/* 프로필사진 미리보기 만들기 */}
                 <Input type="submit" value={uploading}/>
                 <Swither>이미 계정이 있으신가요 ?  <Link style={createAccountStyle} to="/login">로그인하기 &rarr;</Link></Swither>
             </Form>

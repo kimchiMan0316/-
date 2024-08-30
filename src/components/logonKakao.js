@@ -8,7 +8,7 @@ const Wrapper = styled.div`
 const Button = styled.button`
     width: 360px;
     height: 50px;
-    margin: 40px 10px 10px 10px;
+    margin: 20px 10px 10px 10px;
     border: none;
     border-radius: 5px;
     &:hover{

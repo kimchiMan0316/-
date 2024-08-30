@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Post from "../components/post";
 
-const inf = {
+export const inf = {
     name : "parksolego",
     imgURL : "image/untity.png",
     like : 5,

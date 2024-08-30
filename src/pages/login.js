@@ -59,7 +59,7 @@ export default function Login(){
     const [login, setLogins] = useState("로그인");
     const navigate = useNavigate()
     var loginInf={
-        userName: id , 
+        userName: id, 
         passWord: password,
     }
 
@@ -78,14 +78,11 @@ export default function Login(){
         // getLogin() 로그인 처리 함수
         console.log(loginInf)
         setLogins("계정 확인중...");
-        setTimeout(()=>{
-            setLogins("로그인");
-            navigate("/")
-        },2000)
+        getLogin();
     }
     // 로그인 함수
     const getLogin = async()=>{
-        const res = await fetch("/api/login", {
+        const res = await fetch("/login", {
             method:"POST",
             headers:{
                 'Content-Type': 'application/json'
@@ -93,6 +90,8 @@ export default function Login(){
             body: JSON.stringify(loginInf)
         })
         if(res.result === 1){
+            console.log(res);
+            setLogins("로그인");
             navigate("/")
         }else if(res.result === 2){
             alert("아아디를 확인해주세요")
